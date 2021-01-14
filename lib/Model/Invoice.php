@@ -301,6 +301,7 @@ class Invoice implements ArrayAccess
         return self::$getters;
     }
 
+    const STATE_CREATED = 'created';
     const STATE_PENDING = 'pending';
     const STATE_DUNNING = 'dunning';
     const STATE_SETTLED = 'settled';
@@ -322,6 +323,7 @@ class Invoice implements ArrayAccess
     public function getStateAllowableValues()
     {
         return [
+            self::STATE_CREATED,
             self::STATE_PENDING,
             self::STATE_DUNNING,
             self::STATE_SETTLED,
